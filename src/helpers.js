@@ -8,7 +8,7 @@ const calculateTax = subtotal => subtotal * .05;
 
 const calculateTotal = (subtotal, tax) => subtotal + tax;
 
-export const parseToFixed = num => parseFloat(num).toFixed(2);
+const parseToFixed = num => parseFloat(num).toFixed(2);
 
 export const generateTotals = (items) => {
   const subtotal = calculateSubtotal(items);

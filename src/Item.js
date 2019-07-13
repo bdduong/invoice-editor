@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { updateItem, deleteItem } from './actions/invoiceAction';
-import { parseToFixed } from './helpers';
 
 class Item extends Component {
   constructor(props) {
