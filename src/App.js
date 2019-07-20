@@ -20,7 +20,10 @@ class App extends Component {
         <div>
           <h1 className="text-3xl text-center text-green-600">Invoice Editor</h1>
           <div className="h-64 overflow-y-auto">
-            {Object.keys(this.props.invoice.items).map(id => <Item id={id} />)}
+            {Object.keys(this.props.invoice.items).map(id => { 
+              const { name, qty, price, total } = this.props.invoice.items[id];
+              return <Item id={id} name={name} qty={qty} price={price} total={total} />
+            })}
           </div>
         </div>
         <div className="flex justify-between bg-gray-400">

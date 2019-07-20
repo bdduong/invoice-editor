@@ -54,13 +54,14 @@ class Item extends Component {
   }
 
   render() {
+    const { name, qty, price, total } = this.props;
     const borderClasses = 'w-1/5 border-solid border-2 border-black'
     return (
       <div className="mx-4">
-        <input placeholder="Item" value={this.state.name} onChange={this.updateName} className={borderClasses}/>
-        <input placeholder="Qty" value={this.state.qty} onChange={this.updateQty} className={borderClasses}/>
-        <input placeholder="Price" value={this.state.price} onChange={this.updatePrice} className={borderClasses}/>
-        <input placeholder="Total" value={this.state.total} className={borderClasses}/>
+        <input placeholder="Item" value={name} onChange={this.updateName} className={borderClasses}/>
+        <input placeholder="Qty" value={qty} onChange={this.updateQty} className={borderClasses}/>
+        <input placeholder="Price" value={price} onChange={this.updatePrice} className={borderClasses}/>
+        <input placeholder="Total" value={total} className={borderClasses}/>
         <span className="w/1-5 ml-2 cursor-pointer" onClick={this.deleteItem}>X</span>
       </div>
     )
